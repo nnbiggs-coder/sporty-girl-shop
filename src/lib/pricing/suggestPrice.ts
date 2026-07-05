@@ -50,10 +50,7 @@ export function suggestPriceFromComps(
  * TODO: Replace with live API integration (eBay sold listings, SidelineSwap)
  * once API credentials and rate-limit strategy are in place.
  */
-export async function fetchLiveComps(
-  _categorySlug: string,
-  _brand?: string | null
-): Promise<ComparableListing[]> {
+export async function fetchLiveComps(): Promise<ComparableListing[]> {
   // Intentionally returns empty — all comps come from DB in v1.
   // When implementing: call external API, normalize results, optionally cache to comparable_listings.
   return [];

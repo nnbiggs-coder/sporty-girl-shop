@@ -160,7 +160,7 @@ export default async function DashboardPage() {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-border">
-                  {purchases.map((tx) => (
+                  {(purchases ?? []).map((tx) => (
                     <tr key={tx.id}>
                       <td className="px-4 py-3">{(tx.listing as { title: string })?.title}</td>
                       <td className="px-4 py-3 text-text-muted">{formatDate(tx.created_at)}</td>

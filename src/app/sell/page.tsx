@@ -270,7 +270,7 @@ export default function SellPage() {
 
         {/* Step indicator */}
         <div className="mt-4 flex gap-1">
-          {(["details", "photos", ...(requiresSafety ? ["safety"] : []), "scorecard", "pricing", "review"] as Step[]).map((s, i) => (
+          {(["details", "photos", ...(requiresSafety ? ["safety"] : []), "scorecard", "pricing", "review"] as Step[]).map((s) => (
             <div
               key={s}
               className={`h-1 flex-1 rounded-full ${step === s ? "bg-brand-600" : "bg-border"}`}

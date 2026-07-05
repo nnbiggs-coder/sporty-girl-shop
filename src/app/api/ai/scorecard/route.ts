@@ -31,10 +31,7 @@ export async function POST(request: Request) {
     .eq("category_id", listing.category_id);
 
   // Attempt live comps (stub returns empty in v1)
-  const liveComps = await fetchLiveComps(
-    listing.category?.slug ?? "",
-    listing.brand
-  );
+  const liveComps = await fetchLiveComps();
 
   const allComps = [...(comps ?? []), ...liveComps];
   const priceSuggestion = suggestPriceFromComps(allComps, scorecard.condition_tier);

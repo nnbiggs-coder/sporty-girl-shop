@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { useRouter } from "next/navigation";
 
 interface BuyButtonProps {
   listingId: string;
@@ -11,7 +10,6 @@ interface BuyButtonProps {
 
 export function BuyButton({ listingId, price }: BuyButtonProps) {
   const [loading, setLoading] = useState(false);
-  const router = useRouter();
 
   async function handleBuy() {
     setLoading(true);

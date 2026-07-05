@@ -3,7 +3,6 @@ import { createClient, createServiceClient } from "@/lib/supabase/server";
 import { getStripe, calculateStripeTax } from "@/lib/stripe";
 import { calculateFees } from "@/lib/fees/calculateFees";
 import { appConfig } from "@/lib/config";
-import { trackEvent } from "@/lib/analytics/trackEvent";
 
 export async function POST(request: Request) {
   const supabase = await createClient();
